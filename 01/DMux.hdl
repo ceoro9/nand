@@ -1,0 +1,8 @@
+CHIP DMux {
+    IN in, sel;
+    OUT a, b;
+
+    PARTS:
+    CopA(a=in, b=sel, out=a);
+    CopB(a=in, b=sel, out=b);
+}

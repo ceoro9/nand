@@ -1,0 +1,9 @@
+/** Helper function for Mux */
+CHIP CopA {
+    IN a, b;
+    OUT out;
+
+    PARTS:
+    Not(a=b, out=out1);
+    And(a=a, b=out1, out=out);
+}

@@ -1,0 +1,10 @@
+/** Exclusive Or gate, out = Or(a, b) */
+CHIP Or {
+    IN a, b;
+    OUT out;
+
+    PARTS:
+    Not(a=a, out=a1);
+    Not(a=b, out=b1);
+    Nand(a=a1, b=b1, out=out);
+}
